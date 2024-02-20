@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_in_cmd_location.c                              :+:      :+:    :+:   */
+/*   get_cmd_location.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melachyr <melachyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 19:51:16 by melachyr          #+#    #+#             */
-/*   Updated: 2024/02/20 23:26:57 by melachyr         ###   ########.fr       */
+/*   Updated: 2024/02/21 00:36:47 by melachyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ static int	search_in_env(t_pipex *pipex)
 	i = 0;
 	while (pipex->env[i] != NULL)
 	{
-		path = ft_strjoin(pipex->env[i], "/");
-		path = ft_strjoin(path, pipex->cmd[0]);
+		path = ft_strjoin(pipex->env[i], "/", 1);
+		path = ft_strjoin(path, pipex->cmd[0], 1);
 		if (access(path, X_OK) != -1)
 		{
 			pipex->cmd_loc = path;

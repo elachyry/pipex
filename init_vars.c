@@ -6,7 +6,7 @@
 /*   By: melachyr <melachyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 14:22:35 by melachyr          #+#    #+#             */
-/*   Updated: 2024/02/20 23:59:14 by melachyr         ###   ########.fr       */
+/*   Updated: 2024/02/21 00:37:30 by melachyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	get_infile_outfile(t_pipex *pipex, char **argv)
 		if (i == 1)
 		{
 			if (pipex->is_here_doc)
-				pipex->in_file_path = ft_strjoin(".", argv[i]);
+				pipex->in_file_path = ft_strjoin(".", argv[i], 0);
 			else
 				pipex->in_file_path = argv[i];
 		}
@@ -68,7 +68,7 @@ void	init_vars(t_pipex *pipex, char **argv, char argc, char **env)
 	{
 		pipex->cmd_count = argc - 4;
 		pipex->is_here_doc = 1;
-		pipex->delimiter = ft_strjoin(argv[2], "\n");
+		pipex->delimiter = ft_strjoin(argv[2], "\n", 0);
 	}
 	else
 		pipex->cmd_count = argc - 3;

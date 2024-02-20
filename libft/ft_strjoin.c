@@ -6,13 +6,13 @@
 /*   By: melachyr <melachyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:14:59 by melachyr          #+#    #+#             */
-/*   Updated: 2024/02/20 23:27:06 by melachyr         ###   ########.fr       */
+/*   Updated: 2024/02/21 00:36:04 by melachyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/pipex.h"
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin(char *s1, char *s2, int allocated)
 {
 	int		i;
 	int		j;
@@ -37,5 +37,7 @@ char	*ft_strjoin(char *s1, char *s2)
 		j++;
 	}
 	ptr[i] = '\0';
+	if (allocated)
+		free(s1);
 	return (ptr);
 }

@@ -6,7 +6,7 @@
 #    By: melachyr <melachyr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 14:39:33 by melachyr          #+#    #+#              #
-#    Updated: 2024/02/20 23:43:07 by melachyr         ###   ########.fr        #
+#    Updated: 2024/02/21 00:34:09 by melachyr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS) #-fsanitize=address -g3
-	$(CC) $(CFLAGS) $(OBJS) -o $@
+	$(CC) -fsanitize=address -g3 $(CFLAGS) $(OBJS) -o $@
 
 bonus: $(OBJS) #-fsanitize=address -g3
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)

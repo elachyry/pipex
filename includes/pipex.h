@@ -6,7 +6,7 @@
 /*   By: melachyr <melachyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 13:55:21 by melachyr          #+#    #+#             */
-/*   Updated: 2024/02/21 00:11:44 by melachyr         ###   ########.fr       */
+/*   Updated: 2024/02/21 00:36:13 by melachyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 char	**ft_split(char const *s, char sep);
 char	**ft_split_2(char const *s);
-char	*ft_strjoin(char *s1, char *s2);
+char	*ft_strjoin(char *s1, char *s2, int allocated);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
 int		ft_strcmp(const char *str1, const char *str2);

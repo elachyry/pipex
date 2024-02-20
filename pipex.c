@@ -6,7 +6,7 @@
 /*   By: melachyr <melachyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:28:17 by melachyr          #+#    #+#             */
-/*   Updated: 2024/02/21 00:13:54 by melachyr         ###   ########.fr       */
+/*   Updated: 2024/02/21 00:22:55 by melachyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,6 @@ int	main(int argc, char **argv, char **env)
 		if (unlink(pipex.in_file_path) == -1)
 			command_error("unlink", 1);
 	}
-	system("leaks pipex");
+	// system("leaks pipex");
 	return (return_status);
 }
