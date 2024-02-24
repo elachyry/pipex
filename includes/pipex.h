@@ -6,7 +6,7 @@
 /*   By: melachyr <melachyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 13:55:21 by melachyr          #+#    #+#             */
-/*   Updated: 2024/02/21 00:36:13 by melachyr         ###   ########.fr       */
+/*   Updated: 2024/02/24 21:09:52 by melachyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ int		ft_strcmp(const char *str1, const char *str2);
 
 //init
 void	init_vars(t_pipex *pipex, char **argv, char argc, char **env);
-int		get_cmd_location(t_pipex *pipex, int i);
-void	free_table(void **tab);
+int		get_cmd_location(t_pipex *pipex);
+void	free_table(char **tab);
 
 //exceptions
 void	command_error(char *msg, int exit_val);
@@ -68,7 +68,7 @@ void	create_pipes(t_pipex *pipex);
 void	close_pipes(t_pipex *pipex);
 void	first_cmd(t_pipex pipex, int index);
 void	last_cmd(t_pipex pipex, int index);
-void	execute_cmd(t_pipex pipex, char **env, int index);
+void	execute_cmd(t_pipex pipex, char **env);
 void	get_cmd(t_pipex *pipex, char *incmd, int i);
 
 #endif

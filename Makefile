@@ -6,12 +6,12 @@
 #    By: melachyr <melachyr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 14:39:33 by melachyr          #+#    #+#              #
-#    Updated: 2024/02/21 00:34:09 by melachyr         ###   ########.fr        #
+#    Updated: 2024/02/24 21:08:50 by melachyr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-# CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 NAME = pipex
 SRCS = libft/ft_split.c libft/ft_split_2.c libft/ft_strlen.c libft/ft_strdup.c libft/ft_substr.c libft/ft_strcmp.c\
 	   libft/ft_strjoin.c libft/ft_strncmp.c libft/ft_strchr.c libft/ft_strrchr.c libft/ft_putstr_fd.c\
@@ -27,7 +27,7 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS) #-fsanitize=address -g3
-	$(CC) -fsanitize=address -g3 $(CFLAGS) $(OBJS) -o $@
+	$(CC) -fsanitize=address -g3 -fsanitize=address -g3 $(CFLAGS) $(OBJS) -o $@
 
 bonus: $(OBJS) #-fsanitize=address -g3
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)

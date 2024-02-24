@@ -6,7 +6,7 @@
 /*   By: melachyr <melachyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 19:51:16 by melachyr          #+#    #+#             */
-/*   Updated: 2024/02/21 00:36:47 by melachyr         ###   ########.fr       */
+/*   Updated: 2024/02/24 21:09:15 by melachyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	search_in_env(t_pipex *pipex)
 	return (0);
 }
 
-int	get_cmd_location(t_pipex *pipex, int i)
+int	get_cmd_location(t_pipex *pipex)
 {
 	char	*cmd;
 

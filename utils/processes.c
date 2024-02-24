@@ -6,7 +6,7 @@
 /*   By: melachyr <melachyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 23:36:13 by melachyr          #+#    #+#             */
-/*   Updated: 2024/02/21 00:05:25 by melachyr         ###   ########.fr       */
+/*   Updated: 2024/02/24 21:10:34 by melachyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	child_process(t_pipex pipex, char **env, int index)
 		dup2(pipex.fd[index][1], STDOUT_FILENO);
 		close_pipes(&pipex);
 	}
-	execute_cmd(pipex, env, index);
+	execute_cmd(pipex, env);
 }
 
 void	parent_process(t_pipex pipex, int *index)

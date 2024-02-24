@@ -6,7 +6,7 @@
 /*   By: melachyr <melachyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 23:42:08 by melachyr          #+#    #+#             */
-/*   Updated: 2024/02/21 00:08:17 by melachyr         ###   ########.fr       */
+/*   Updated: 2024/02/24 21:13:05 by melachyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ void	last_cmd(t_pipex pipex, int index)
 	close_pipes(&pipex);
 }
 
-void	execute_cmd(t_pipex pipex, char **env, int index)
+void	execute_cmd(t_pipex pipex, char **env)
 {
 	int	result;
 
-	result = get_cmd_location(&pipex, index);
+	result = get_cmd_location(&pipex);
 	if (!result)
 		command_not_found(pipex.cmd[0], 127);
 	else if (result == 2)
